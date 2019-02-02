@@ -16,12 +16,12 @@ LANGUAGE = "english"
 
 
 list = []
-def summary(SENTENCES_COUNT=20):
+def summary(SENTENCES_COUNT=10):
    string=""
    url = "http://www.feynmanlectures.caltech.edu/I_02.html"
    parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
    # or for plain text files
-   # parser = PlaintextParser.from_file("document.txt", Tokenizer(LANGUAGE))
+   #parser = PlaintextParser.from_file("document.txt", Tokenizer(LANGUAGE))
    stemmer = Stemmer(LANGUAGE)
 
    summarizer = Summarizer(stemmer)
