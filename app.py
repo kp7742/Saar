@@ -7,8 +7,7 @@ app = Flask(__name__)
 
 @app.route('//')
 def index():
-    return 'welcome to flask'
-    return ju.Row_to_Json(rows)
+    return 'Welcome to Saar App'
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -20,10 +19,9 @@ def upload_file():
 
 @app.route('/summary')
 def hello_world():
-   # hi=input("Hello sentence count: ")
     output=ju.summary()
     return output
 
 if __name__ == '__main__':
-    app.run(debug=True, host="192.168.137.1", port="1111")
+    app.run(debug=True, host="127.0.0.1", port="1111")
 
